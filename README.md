@@ -49,7 +49,9 @@ make
 
 ### Make Install
 
-``` make install ```
+```
+make install
+```
 
 ### Update ldconfig
 
@@ -58,7 +60,7 @@ Add new config in `/etc/ld.so.conf.d`.
 This will update the dynamic libary in the systems, so it can be discover by program that need the libararies.
 
 ```
-`echo '/opt/ssl/lib' > /etc/ld.so.conf.d/openssl-1.0.2o.conf`
+echo '/opt/ssl/lib' > /etc/ld.so.conf.d/openssl-1.0.2o.conf
 ```
 
 After that execute this to reload, and look at the output if your library path already loaded properly.
@@ -83,7 +85,7 @@ tar xzvf curl-7.47.1.tar.gz
 
 ### Configure the curl before compile.
 - --prefix = define the path where we install the binary and library.
-- --openssldir = define the path where we install the binary and library.
+- --with-ssl = define the path where openssl library that want to use.
 
 You can choose it to `/usr` in the real world, but for now we just tested in `/opt/curl`.
 
@@ -101,7 +103,9 @@ make
 
 ### Make Install
 
-``` make install ```
+```
+make install
+```
 
 ### Update ldconfig
 
@@ -110,7 +114,7 @@ Add new config in `/etc/ld.so.conf.d`.
 This will update the dynamic libary in the systems, so it can be discover by program that need the libararies.
 
 ```
-`echo '/opt/curl/lib' > /etc/ld.so.conf.d/curl-7.47.1.conf`
+echo '/opt/curl/lib' > /etc/ld.so.conf.d/curl-7.47.1.conf
 ```
 
 After that execute this to reload, and look at the output if your library path already loaded properly.
@@ -135,7 +139,7 @@ tar xzvf git-2.32.0.tar.gz
 
 ### Configure the curl before compile.
 - --prefix = define the path where we install the binary and library.
-- --openssldir = define the path where we install the binary and library.
+- --with-curl = define the path where curl library that want to use.
 
 You can choose it to `/usr` in the real world, but for now we just tested in `/opt/git`.
 
@@ -153,7 +157,9 @@ make
 
 ### Make Install
 
-``` make install ```
+```
+make install
+```
 
 ### Try GIT
 
